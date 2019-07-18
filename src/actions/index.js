@@ -12,7 +12,7 @@ export const FAILURE = "FAILURE"
 // remember that now we have controll over our thunk-based action creator
 
 export const fetching = () => dispatch => {
-    fispatch({ type: FETCHING });
+    dispatch({ type: FETCHING });
     axios
     .get(`https://swapi.co/api/people/`)
     .then(res => dispatch({ type: SUCCESS, payload: res.data.results}))
